@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_with	tests	# perform "make test" (requires working $DISPLAY)
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Tk
 %define		pnam	JPEG
@@ -6,7 +10,7 @@ Summary(pl):	Modu³ Perla Tk::JPEG - obs³uga JPEG-ów dla Tk::Photo
 Name:		perl-Tk-JPEG
 Version:	2.014
 Release:	2
-License:	Artistic or GPL
+License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f697bc351548160491c7e06949250c86
@@ -33,20 +37,24 @@ rm -f jpeg/Makefile.PL
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+install jpeg/README README-jpeg
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc README README-jpeg
 %attr(755,root,root) %{_bindir}/tkjpeg
 %{perl_vendorarch}/Tk/JPEG.pm
 %dir %{perl_vendorarch}/auto/Tk/JPEG

@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test" (requires working $DISPLAY)
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Tk
-%define		pnam	JPEG
+%define	pdir	Tk
+%define	pnam	JPEG
 Summary:	Tk::JPEG Perl module - JPEG loader for Tk::Photo
 Summary(pl):	Modu³ Perla Tk::JPEG - obs³uga JPEG-ów dla Tk::Photo
 Name:		perl-Tk-JPEG

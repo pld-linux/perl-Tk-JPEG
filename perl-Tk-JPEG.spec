@@ -9,7 +9,7 @@ Summary:	Tk::JPEG Perl module - JPEG loader for Tk::Photo
 Summary(pl):	Modu³ Perla Tk::JPEG - obs³uga JPEG-ów dla Tk::Photo
 Name:		perl-Tk-JPEG
 Version:	2.014
-Release:	2
+Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz

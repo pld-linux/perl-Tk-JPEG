@@ -1,0 +1,45 @@
+--- Tk-JPEG-2.014/Makefile.PL.orig	Mon Jan 10 22:49:06 2000
++++ Tk-JPEG-2.014/Makefile.PL	Sun Jul 21 13:57:38 2002
+@@ -4,24 +4,15 @@
+ 
+ Tk::MMutil::TkExtMakefile(
+     'NAME'         => 'Tk::JPEG', 
+-    'INC'          => '-Ijpeg',
+     'EXE_FILES'    => ['tkjpeg'],
+     'PMLIBDIRS'    => [],
+     'OBJECT'       => '$(O_FILES)',
+     'VERSION_FROM' => 'JPEG.pm',
+     'XS_VERSION'   => $Tk::Config::VERSION,
+-    'MYEXTLIB'     => 'jpeg/libjpeg.a',   
+-    'MYEXTLIB'     => "jpeg/libjpeg$l",
+-    'dist'         => { COMPRESS => 'gzip -f9', SUFFIX => '.gz' },
+-    'clean'        => { FILES => 'jpeg/Makefile jpeg/config.status jpeg/jconfig.h' }   );
++    'MYEXTLIB'     => '-ljpeg',   
++    'dist'         => { COMPRESS => 'gzip -f9', SUFFIX => '.gz' } );
+ 
+ 
+-sub MY::postamble {
+-'
+-$(MYEXTLIB)  : FORCE
+-	cd jpeg && $(MAKE) libjpeg'.$l.'
+-';
+-}
+ 
+ 
+ 
+--- Tk-JPEG-2.014/imgJPEG.c.orig	Fri Apr 21 20:51:33 2000
++++ Tk-JPEG-2.014/imgJPEG.c	Sun Jul 21 14:08:01 2002
+@@ -66,13 +66,8 @@
+ #  include "libjpeg:jerror.h"
+ #else
+ #  include <sys/types.h>
+-#ifdef HAVE_JPEGLIB_H
+ #  include <jpeglib.h>
+ #  include <jerror.h>
+-#else
+-#  include "jpeg/jpeglib.h"
+-#  include "jpeg/jerror.h"
+-#endif
+ #endif
+ 
+ #ifdef __WIN32__

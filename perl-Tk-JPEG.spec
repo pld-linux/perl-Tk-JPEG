@@ -18,6 +18,7 @@ Patch0:		%{name}-system.patch
 BuildRequires:	libjpeg-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Tk >= 800.015
+BuildRequires:	perl-Tk < 804.027
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

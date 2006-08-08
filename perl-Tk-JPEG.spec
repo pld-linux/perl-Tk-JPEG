@@ -32,7 +32,7 @@ obrazu Photo.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
+%patch0 -p1
 rm -f jpeg/Makefile.PL
 
 %build

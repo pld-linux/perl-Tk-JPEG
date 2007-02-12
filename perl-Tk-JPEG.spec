@@ -6,7 +6,7 @@
 %define		pdir	Tk
 %define		pnam	JPEG
 Summary:	Tk::JPEG Perl module - JPEG loader for Tk::Photo
-Summary(pl):	Modu≥ Perla Tk::JPEG - obs≥uga JPEG-Ûw dla Tk::Photo
+Summary(pl.UTF-8):   Modu≈Ç Perla Tk::JPEG - obs≈Çuga JPEG-√≥w dla Tk::Photo
 Name:		perl-Tk-JPEG
 Version:	2.014
 Release:	3
@@ -26,8 +26,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Tk::JPEG Perl extension which supplies JPEG format loader for Photo
 image type.
 
-%description -l pl
-Rozszerzenie Perla Tk::JPEG pozwalaj±ce na odczyt plikÛw JPEG do typu
+%description -l pl.UTF-8
+Rozszerzenie Perla Tk::JPEG pozwalajƒÖce na odczyt plik√≥w JPEG do typu
 obrazu Photo.
 
 %prep

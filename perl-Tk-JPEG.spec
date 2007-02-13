@@ -6,7 +6,7 @@
 %define		pdir	Tk
 %define		pnam	JPEG
 Summary:	Tk::JPEG Perl module - JPEG loader for Tk::Photo
-Summary(pl.UTF-8):   Moduł Perla Tk::JPEG - obsługa JPEG-ów dla Tk::Photo
+Summary(pl.UTF-8):	Moduł Perla Tk::JPEG - obsługa JPEG-ów dla Tk::Photo
 Name:		perl-Tk-JPEG
 Version:	2.014
 Release:	3

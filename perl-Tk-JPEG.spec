@@ -12,9 +12,10 @@ Version:	2.014
 Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Tk/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f697bc351548160491c7e06949250c86
 Patch0:		%{name}-system.patch
+URL:		http://search.cpan.org/dist/Tk-JPEG/
 BuildRequires:	libjpeg-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Tk >= 800.015

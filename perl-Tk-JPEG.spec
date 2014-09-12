@@ -61,6 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/tkjpeg
 %{perl_vendorarch}/Tk/JPEG.pm
 %dir %{perl_vendorarch}/auto/Tk/JPEG
-%{perl_vendorarch}/auto/Tk/JPEG/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Tk/JPEG/*.so
 %{_mandir}/man[13]/*

@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires working $DISPLAY)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Tk
 %define		pnam	JPEG
 Summary:	Tk::JPEG Perl module - JPEG loader for Tk::Photo
